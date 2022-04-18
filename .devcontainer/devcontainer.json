@@ -1,0 +1,9 @@
+{
+  "name": "admin",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/app",
+  "settings": {},
+  "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "johnsoncodehk.volar"],
+  "shutdownAction": "stopCompose"
+}
