@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h1>User</h1>
+    <h1>Tweets Create</h1>
     <v-btn color="primary" @click="ready = !ready"> ready? </v-btn>
     <div class="py-3">ready: {{ ready }}</div>
   </v-container>
