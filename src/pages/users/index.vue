@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <h1>Users</h1>
     <v-divider />
     <v-card>

@@ -1,16 +1,11 @@
 <template>
-  <v-app>
-    <v-app-bar clipped-left app>
+  <v-layout>
+    <v-navigation-drawer color="primary" permanent>
       <template #prepend>
-        <v-app-bar-nav-icon />
+        <logo class="my-1 ml-7" />
       </template>
-      <template #append>
-        <v-btn icon="mdi-dots-vertical" />
-      </template>
-    </v-app-bar>
-
-    <v-navigation-drawer clipped app>
-      <v-list density="compact" nav>
+      <v-divider />
+      <v-list density="compact" color="primary" nav>
         <v-list-group v-for="item in nav" :key="item.title">
           <template #activator="{ props }">
             <v-list-item v-bind="props" :prepend-icon="item.icon" :title="item.title" :value="item.value" />
@@ -19,7 +14,6 @@
           <v-list-item
             v-for="subitem in item.sub"
             :key="subitem.title"
-            active-color="primary"
             :to="subitem.to"
             :title="subitem.title"
             :value="subitem.value"
@@ -36,16 +30,25 @@
         <!-- </v-list-group> -->
       </v-list>
     </v-navigation-drawer>
+
+    <v-app-bar flat>
+      <template #prepend>
+        <v-app-bar-nav-icon />
+      </template>
+      <template #append>
+        <v-btn icon="mdi-dots-vertical" />
+      </template>
+    </v-app-bar>
+
     <v-main>
       <v-divider />
-      <v-container fluid>
-        <slot />
-      </v-container>
+      <nuxt-page />
     </v-main>
-  </v-app>
+  </v-layout>
 </template>
 
 <script setup lang="ts">
+import Logo from '../components/Logo.vue'
 const nav = [
   {
     title: 'User',

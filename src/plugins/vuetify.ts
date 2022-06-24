@@ -27,8 +27,8 @@ const light: ThemeDefinition = {
   colors: {
     background: '#FFFFFF',
     surface: '#FFFFFF',
-    primary: '#6200EE',
-    'primary-darken-1': '#3700B3',
+    primary: '#37474F',
+    'primary-darken-1': '#455A64',
     secondary: '#03DAC6',
     'secondary-darken-1': '#018786',
     error: '#B00020',
