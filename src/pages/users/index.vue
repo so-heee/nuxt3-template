@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <h1>Users</h1>
+    <h1>Users{{ d }}</h1>
     <v-divider />
     <v-card>
       <v-card-title>
@@ -34,6 +34,8 @@
 definePageMeta({
   layout: 'dashboard'
 })
+const { data } = await useFetch('http://localhost:3000/v1/users/7')
+const d = data.value.name
 const search = ''
 const headers = [
   {
